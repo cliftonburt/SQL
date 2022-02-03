@@ -107,6 +107,17 @@ CREATE TABLE student (
 );
 
 
+CREATE TABLE friends (
+  id INTEGER PRIMARY KEY
+  name TEXT UNIQUE
+  birthday DATE
+);
+
+INSERT INTO friends (name, birthday)
+VALUE (Ororo Munroe, 1940-05-30);
+
+SELECT * FROM friends;
+
 
 -- ALTER TABLE Statement. The ALTER TABLE statement is used to modify the columns of an existing table. When combined wiht the ADD COLUMN clause, it is used to add a new column.
 
