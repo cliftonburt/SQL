@@ -149,11 +149,72 @@ FROM bodega;
 
 
 
+-- create table
 
+CREATE TABLE friends (
+  id INTEGER,
+  name TEXT,
+  birthday DATE
+);
 
+-- add fren 
 
+INSERT INTO friends (id, name, birthday)
+VALUES (1, 'Ororo Munroe', '1940-05-30');
 
+-- verify fren added
 
+SELECT * 
+FROM friends;
+
+-- add two more fren
+
+INSERT INTO friends (id, name, birthday)
+VALUES (2, 'BFF One', 'YYYY-MM-DD');
+
+INSERT INTO friends (id, name, birthday)
+VALUES (3, 'BFF Two', 'YYYY-MM-DD');
+
+-- verify
+
+SELECT *
+FROM friends
+
+-- update first fren name from Ororo to Storm 
+
+UPDATE friends 
+SET name = 'Storm'
+WHERE id = 1;
+
+-- add a new column named email
+
+The ALTER TABLE statement is used to add, delete, or modify columns in an existing table:
+
+ALTER TABLE table_name
+ADD COLUMN column DATA_TYPE;
+
+Your code should look something like:
+
+ALTER TABLE friends 
+ADD COLUMN email TEXT; 
+
+UPDATE friends
+SET email = 'bffone@gmail.com'
+WHERE id = 2;
+
+UPDATE friends 
+SET email = 'bfftwo@gmail.com'
+WHERE id = 3;
+
+-- DESTROY
+
+DELETE FROM friends
+WHERE id = 1;
+
+-- verify
+
+SELECT *
+FROM friends
 
 
 
