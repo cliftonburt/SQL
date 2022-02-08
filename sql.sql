@@ -216,8 +216,13 @@ WHERE id = 1;
 SELECT *
 FROM friends
 
+--https://glass.xyz/v/u53D3V1Ey_uF7QrHyMxPAO7M2aPC8cY_9WdJiIuDkLs=?display=iframe
 
-
+SELECT * FROM aave_v2."LendingPool_evt_Deposit"
+WHERE "hash" = ''
+AND "evt_block_time" > now{} - internal '1 month'
+ORDER BY "amount" DESC
+LIMIT 10
 
 
 
