@@ -225,6 +225,25 @@ ORDER BY "amount" DESC
 LIMIT 10
 
 
+1. Create a new database called owners_pets
 
 
+2. Create the owners table
+id column INT
+first_name VARCHAR(30)
+last_name VARCHAR(30)
+city VARCHAR(30)
+state CHAR(2)
+
+3. Create the pets table which includes a foreign key
+id 
+species (30)
+full_name (30)
+age INT
+owner_id INT
+
+4. Add an email column to th owners table
+email VARCHAR(50)
+
+5. Change the data type of the last_name column in the owners table to VARCHAR(50)
 
